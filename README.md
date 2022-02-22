@@ -1,0 +1,1 @@
+a clicker game without any clicking written in seed
