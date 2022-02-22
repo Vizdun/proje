@@ -7,8 +7,8 @@ fn init(_: Url, o: &mut impl Orders<Msg>) -> Model {
     o.stream(streams::interval(1000, || Msg::Increment));
     Model {
         emc: BigUint::from(0 as u32),
-        flowers: BigUint::from(4 as u32),
-        watches: BigUint::from(35 as u32),
+        flowers: BigUint::from(1 as u32),
+        watches: BigUint::from(0 as u32),
     }
 }
 
@@ -78,10 +78,7 @@ fn view(model: &Model) -> Node<Msg> {
                         "Buy"
                     ]
                 } else {
-                    button![
-                        C!["btn btn-secondary float-end"],
-                        "Buy"
-                    ]
+                    button![C!["btn btn-secondary float-end"], "Buy"]
                 },
             ],
         ],)
